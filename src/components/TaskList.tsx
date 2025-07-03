@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+//import React, { useEffect, useState } from "react";
 import { getTasks, deleteTask } from "../services/taskService";
-//import { Task } from "../types";
+import { Task } from "../types";
 
 const TaskList = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
