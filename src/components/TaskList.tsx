@@ -1,8 +1,15 @@
-//import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getTasks, deleteTask } from "../services/taskService";
-import { Task } from "../types";
+//import { Task } from "../types/taskTypes";
 
 const TaskList = () => {
+
+  interface Task {
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
   const [tasks, setTasks] = useState<Task[]>([]);
 
   const fetchTasks = async () => {
@@ -21,7 +28,7 @@ const TaskList = () => {
 
   return (
     <div className="task-list">
-      {tasks.map((task) => (
+      {tasks.map((task: Task) => (
         <div key={task.id} className="task-card">
           <h3>Tarea: {task.title}</h3>
           <h3>ID: {task.id}</h3>
