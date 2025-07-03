@@ -1,6 +1,8 @@
 import axios from "axios";
+/* Para pruebas locales*/ 
+const API_URL = "http://localhost:3000/api/tasks"; 
 
-const API_URL = "https://task-api-xyz.onrender.com/api/tasks";
+//const API_URL = "https://task-api-xyz.onrender.com/api/tasks";
 
 export const getTasks = () => axios.get(API_URL);
 
