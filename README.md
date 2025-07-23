@@ -1,5 +1,4 @@
 🚀 Task List 🚀
-Badge Badge Badge Badge
 
 📖 Descripción
 TaskList es una aplicacion con API simple para gestionar tareas desde Postman o un frontend, con endpoints para:
