@@ -1,8 +1,12 @@
 import axios from "axios";
 /* Para pruebas locales, funciona*/ 
-const API_URL = "http://localhost:3000/api/tasks"; 
+//const API_URL = "http://localhost:3000/api/tasks"; 
 
 //const API_URL = "https://task-api-xyz.onrender.com/api/tasks";
+
+const API_URL = axios.create({
+  baseURL: import.meta.env.VITE_API_URL
+});
 
 export const getTasks = () => axios.get(API_URL);
 
